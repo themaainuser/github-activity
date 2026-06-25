@@ -53,7 +53,7 @@ async function getRecentPublicEvents(username: string, max = 300) {
 
 // Example usage
 (async () => {
-  const username = "hkirat";
+  const username = process.argv[2]!;
   const events = await getRecentPublicEvents(username, 200);
   const repoLink = events[0]?.repo.url
     ?.replace("api.", "")
